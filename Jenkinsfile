@@ -1,7 +1,6 @@
 pipeline {
     agent {
         node {
-            label 'node-zendesk-label'
             customWorkspace 'node-zendesk'
         }
     }
