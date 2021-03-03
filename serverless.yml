@@ -1,0 +1,13 @@
+service: cs-ai-sa-services-lambda-zendesk
+
+provider:
+  name: aws
+  region: us-east-1
+
+layers:
+  cs-ai-sa-services-lambda-zendesk:
+    path: ./lib
+    compatibleRuntimes:
+      - nodejs12.x
+    description: Node Zendesk library layer
+    retain: true
