@@ -6,7 +6,13 @@ provider:
 
 layers:
   cs-ai-sa-services-lambda-zendesk:
-    path: ./lib
+    path: ..
+    package:
+      exclude:
+        - ./**
+      include:
+        - ./node-zendesk/package.json
+        - ./node-zendesk/lib/**
     compatibleRuntimes:
       - nodejs12.x
     description: Node Zendesk library layer
