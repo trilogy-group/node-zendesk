@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-
+    agent {
+        node {
+            label 'node-zendesk-label'
+            customWorkspace 'node-zendesk'
+        }
+    }
     stages {
         stage('Deploy layer') {
             steps {
